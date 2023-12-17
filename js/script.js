@@ -117,4 +117,24 @@ window.onclick = (e) => {
     itemDetailModal.style.display = 'none';
   }
 };
+   // Run Feather Icons
+   feather.replace();
 
+   function sendWhatsAppMessage() {
+       // Get input values
+       var nama = document.getElementById('nama').value;
+       var email = document.getElementById('email').value;
+       var no_hp = document.getElementById('no_hp').value;
+
+       // Construct WhatsApp message
+       var message = "Nama: " + nama + "%0AEmail: " + email + "%0ANo HP: " + no_hp;
+
+       // Replace '1234567890' with your actual WhatsApp business number
+       var whatsappNumber = "085348848511"; // Example number, replace it
+
+       // WhatsApp link with the constructed message
+       var whatsappLink = "https://wa.me/" + whatsappNumber + "?text=" + encodeURIComponent(message);
+
+       // Open WhatsApp link in a new window/tab
+       window.open(whatsappLink, '_blank');
+   }

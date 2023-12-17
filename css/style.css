@@ -131,6 +131,20 @@ body {
 }
 
 /* Shopping Cart */
+#shopping-cart-button {
+  position: relative;
+}
+
+#shopping-cart-button .quantity-bage {
+  display:inline-block;
+  padding: 1px 5px;
+  background-color: #ff0a0a;
+  border: 6px;
+  font-size: 0.8rem;
+  top: 0;
+  right: -10px;
+}
+
 .shopping-cart {
   position: absolute;
   top: 100%;
@@ -280,12 +294,19 @@ body {
 }
 
 .about .row .about-img img {
-  width: 300px; /* Ubah sesuai dengan panjang yang diinginkan */
-  height: 300px; /* Ubah sesuai dengan lebar yang diinginkan */
+  max-width: 250px;
+  height: auto;
   object-fit: cover;
   border-radius: 50%;
   display: block;
   margin: auto;
+}
+
+/* Media query untuk ukuran layar perangkat */
+@media (max-width: 480px) {
+  .about .row .about-img img {
+    max-width: 100%;
+  }
 }
 
 .about .row .content {

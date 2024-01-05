@@ -18,6 +18,9 @@
   <script src="https://unpkg.com/feather-icons"></script>
   <!-- My Style -->
   <link rel="stylesheet" href="css/style.css">
+  <!-- Include Alpine.js and Feather Icons -->
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
 
 
 </head>
@@ -41,7 +44,9 @@
 
     <div class="navbar-extra">
       <a href="#" id="search-button"><i data-feather="search"></i></a>
-      <a href="#" id="shopping-cart-button"><i data-feather="shopping-cart"></i></a>
+      <a href="#"id="shopping-cart-button">
+        <i data-feather="shopping-cart"></i>
+        <span class="quantity-badge">3</span></i></a>
       <a href="login.html" id="login-button"><i data-feather="user"></i></a>
       <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
       
@@ -164,19 +169,20 @@
     <div class="row">
       <div class="product-card">
         <div class="product-icons">
-          <a href="#"><i data-feather="shopping-cart"></i></a>
+          <a href="id="shopping-cart-button>
+            <i data-feather="shopping-cart"></i>
           <a href="#" class="item-detail-button"><i data-feather="eye"></i></a>
         </div>
         <div class="product-image">
-          <img src="img/products/1.jpg" alt="Product 1">
+          <img src="img/products/1.jpg" alt="Product">
         </div>
         <div class="product-content">
           <h3>Kerupuk kepo </h3>
           <div class="product-stars">
             <i data-feather="star" class="star-full"></i>
-            <i data-feather="star" class="star-full"></i>
-            <i data-feather="star" class="star-full"></i>
-            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star"></i>
+            <i data-feather="star"></i>
+            <i data-feather="star"></i>
             <i data-feather="star"></i>
           </div>
           <div class="product-price">Rp 15.000 <span>Rp 20.000</span></div>
@@ -188,12 +194,12 @@
           <a href="#" class="item-detail-button"><i data-feather="eye"></i></a>
         </div>
         <div class="product-image">
-          <img src="img/products/2.jpg" alt="Product 2">
+          <img src="img/products/2.jpg" alt="Product">
         </div>
         <div class="product-content">
           <h3>Kue Duri-Durian</h3>
           <div class="product-stars">
-            <i data-feather="star"></i>
+             <i data-feather="star" class="star-full"></i>
             <i data-feather="star"></i>
             <i data-feather="star"></i>
             <i data-feather="star"></i>
@@ -208,18 +214,58 @@
           <a href="#" class="item-detail-button"><i data-feather="eye"></i></a>
         </div>
         <div class="product-image">
-          <img src="img/products/3.jpg" alt="Product 3">
+          <img src="img/products/3.jpg" alt="Product">
         </div>
         <div class="product-content">
           <h3>Kerupuk Kepo </h3>
           <div class="product-stars">
-            <i data-feather="star"></i>
+              <i data-feather="star" class="star-full"></i>
             <i data-feather="star"></i>
             <i data-feather="star"></i>
             <i data-feather="star"></i>
             <i data-feather="star"></i>
           </div>
           <div class="product-price">Rp 15.000 <span>Rp 20.000</span></div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-icons">
+          <a href="#"><i data-feather="shopping-cart"></i></a>
+          <a href="#" class="item-detail-button"><i data-feather="eye"></i></a>
+        </div>
+        <div class="product-image">
+          <img src="img/products/4.jpg" alt="Product">
+        </div>
+        <div class="product-content">
+          <h3>Kerupuk Kepo pedas </h3>
+          <div class="product-stars">
+            <i data-feather="star" class="star-full"></i>
+            <i data-feather="star"></i>
+            <i data-feather="star"></i>
+            <i data-feather="star"></i>
+            <i data-feather="star"></i>
+          </div>
+          <div class="product-price">Rp 16.000 <span>Rp 20.000</span></div>
+        </div>
+      </div>
+       <div class="product-card">
+        <div class="product-icons">
+          <a href="#"><i data-feather="shopping-cart"></i></a>
+          <a href="#" class="item-detail-button"><i data-feather="eye"></i></a>
+        </div>
+        <div class="product-image">
+          <img src="img/products/5.jpg" alt="Product">
+        </div>
+        <div class="product-content">
+          <h3>Kue duri-durian </h3>
+          <div class="product-stars">
+             <i data-feather="star" class="star-full"></i>
+            <i data-feather="star"></i>
+            <i data-feather="star"></i>
+            <i data-feather="star"></i>
+            <i data-feather="star"></i>
+          </div>
+          <div class="product-price">Rp 26.000 <span>Rp 30.000</span></div>
         </div>
       </div>
     </div>
@@ -250,9 +296,7 @@
           <i data-feather="phone"></i>
           <input type="text" placeholder="no hp">
         </div>
-        <button type="https://api.whatsapp.com/send/?phone=%2B6285348848511&text&type=phone_number&app_absent=0" class="btn" onclick="sendWhatsAppMessage()">Kirim Pesan</button>
-      
-     
+        <a href="https://wa.me/qr/UQDT5GVUT5LFD1" class="btn" target="_blank">Kirim Pesan WhatsApp</a>
       </form>
     </div>
   </section>
@@ -260,10 +304,10 @@
   <!-- Footer start -->
   <footer>
    <div class="socials">
-   <a href="#"><i data-feather="instagram"></i></a>
-  <a href="#"><i data-feather="twitter"></i></a>
-  <a href="#"><i data-feather="facebook"></i></a>
-</div>
+      <a href="https://www.instagram.com/ukm310"id=""><i data-feather="instagram"></i></a>
+      <a href="#"><i data-feather="twitter"></i></a>
+      <a href="#"><i data-feather="facebook"></i></a>
+   </div>
     <div class="links">
       <a href="#home">Home</a>
       <a href="#about">Tentang Kami</a>
@@ -348,6 +392,5 @@
   </script>
   <!-- My Javascript -->
   <script src="js/script.js"></script>
-
 </body>
 </html>
